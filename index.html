@@ -1,246 +1,258 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Rutuja Shete | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meesho Online Shopping</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-<style>
+    body {
+      background: #f8f8f8;
+    }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
+    header {
+      background: white;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      box-shadow: 0 2px 5px #ddd;
+    }
 
-body{
-background:linear-gradient(135deg,#667eea,#764ba2);
-}
+    .logo {
+      color: #9f2089;
+      font-size: 32px;
+      font-weight: bold;
+    }
 
+    .search {
+      padding: 12px;
+      width: 40%;
+      min-width: 200px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
 
-header{
-text-align:center;
-padding:60px 20px;
-color:white;
-}
+    header a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
 
-header img{
-width:140px;
-border-radius:50%;
-margin-bottom:15px;
-border:4px solid white;
-}
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      flex-wrap: wrap;
+    }
 
-header h1{
-font-size:42px;
-letter-spacing:1px;
-}
+    nav a {
+      color: #444;
+      text-decoration: none;
+    }
 
-header p{
-margin-top:10px;
-font-size:18px;
-opacity:0.9;
-}
+    .banner {
+      margin: 25px auto;
+      width: 90%;
+      padding: 45px 20px;
+      background: #f5d9ef;
+      text-align: center;
+      border-radius: 10px;
+    }
 
+    .banner h1 {
+      color: #9f2089;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
 
-nav{
-background:rgba(0,0,0,0.7);
-padding:15px;
-text-align:center;
-position:sticky;
-top:0;
-}
+    .banner p {
+      margin-bottom: 18px;
+    }
 
-nav a{
-color:white;
-text-decoration:none;
-margin:0 18px;
-font-size:18px;
-padding:6px 10px;
-border-radius:5px;
-transition:0.3s;
-}
+    .banner button, .product button {
+      background: #9f2089;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-nav a:hover{
-background:#ffd369;
-color:black;
-}
+    h2 {
+      text-align: center;
+      margin: 30px 0 20px;
+    }
 
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 20px 5%;
+    }
 
-section{
-background:white;
-width:80%;
-margin:40px auto;
-padding:35px;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
-transition:0.4s;
-}
+    .product {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 18px;
+      box-shadow: 0 2px 8px #ddd;
+    }
 
-section:hover{
-transform:translateY(-8px);
-}
+    .product img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
 
-h2{
-margin-bottom:20px;
-color:#333;
-border-left:5px solid #667eea;
-padding-left:10px;
-}
+    .product h3 {
+      margin: 12px 5px;
+      font-size: 17px;
+    }
 
+    .price {
+      color: #16833c;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px;
+    }
 
-.skills-list{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
+    .product button {
+      margin-top: 8px;
+    }
 
-.skills-list span{
-background:#667eea;
-color:white;
-padding:8px 14px;
-border-radius:20px;
-font-size:14px;
-}
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+    }
 
-.project-card{
-background:#f4f4f4;
-padding:15px;
-margin:10px 0;
-border-radius:8px;
-transition:0.3s;
-}
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
 
-.project-card:hover{
-background:#667eea;
-color:white;
-transform:scale(1.03);
-}
+      .search {
+        width: 100%;
+      }
 
-
-ul{
-margin-left:20px;
-}
-
-li{
-margin:8px 0;
-}
-
-
-
-.contact-btn{
-display:inline-block;
-margin-top:10px;
-padding:10px 18px;
-background:#667eea;
-color:white;
-text-decoration:none;
-border-radius:25px;
-transition:0.3s;
-}
-
-.contact-btn:hover{
-background:#333;
-}
-
-
-footer{
-text-align:center;
-color:white;
-padding:20px;
-margin-top:20px;
-font-size:14px;
-}
-
-</style>
-
+      .banner h1 {
+        font-size: 25px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
+  <header>
+    <div class="logo">meesho</div>
+    <input class="search" id="search"
+      type="text" placeholder="Search for products..."
+      oninput="searchProducts()">
+    <a href="#products">🛒 Shop Now</a>
+  </header>
 
+  <nav>
+    <a href="#products">All Products</a>
+    <a href="#products">Women</a>
+    <a href="#products">Men</a>
+    <a href="#products">Kids</a>
+    <a href="#products">Home & Kitchen</a>
+  </nav>
 
-<h1>Rutuja Shete</h1>
+  <section class="banner">
+    <h1>Big Shopping Sale!</h1>
+    <p>Discover fashion, lifestyle and home essentials.</p>
+    <button onclick="document.getElementById('products')
+      .scrollIntoView({behavior:'smooth'})">
+      Shop Now
+    </button>
+  </section>
 
-<p>Web Developer | Learning & Building Websites</p>
+  <h2>Popular Products</h2>
 
-</header>
+  <section class="products" id="products">
 
-<nav>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500"
+        alt="Women's fashion">
+      <h3>Women's Fashion</h3>
+      <p class="price">₹399</p>
+      <button onclick="addToCart('Women’s Fashion',399)">
+        Add to Cart
+      </button>
+    </div>
 
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#hobbies">Hobbies</a>
-<a href="#contact">Contact</a>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500"
+        alt="Casual T-shirt">
+      <h3>Casual T-Shirt</h3>
+      <p class="price">₹249</p>
+      <button onclick="addToCart('Casual T-Shirt',249)">
+        Add to Cart
+      </button>
+    </div>
 
-</nav>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500"
+        alt="Sports shoes">
+      <h3>Sports Shoes</h3>
+      <p class="price">₹599</p>
+      <button onclick="addToCart('Sports Shoes',599)">
+        Add to Cart
+      </button>
+    </div>
 
-<section id="about">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500"
+        alt="Fashion handbag">
+      <h3>Fashion Handbag</h3>
+      <p class="price">₹349</p>
+      <button onclick="addToCart('Fashion Handbag',349)">
+        Add to Cart
+      </button>
+    </div>
 
-<h2>About Me</h2>
+  </section>
 
-<p>Hello! My name is <b>Rutuja Shete</b>. I am learning web development and I enjoy creating beautiful websites and improving my coding skills.completed my school education from SVB High School, Pirangut. During my schooling, I developed basic knowledge in academics and participated in various school activities which helped improve my confidence and skills.</p>
-                
+  <footer>
+    <p>Meesho Shopping Demo</p>
+    <p>© 2026 Online Shopping Website</p>
+  </footer>
 
-</section>
+  <script>
+    let cart = [];
 
-<section id="skills">
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      alert(name + " added to cart!\nCart items: " + cart.length);
+    }
 
-<h2>My Skills</h2>
+    function searchProducts() {
+      const query = document.getElementById("search")
+        .value.toLowerCase();
 
-<div class="skills-list">
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
-</div>
-
-</section>
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-<div class="project-card">Portfolio Website</div>
-
-<div class="project-card">Login Page</div>
-
-<div class="project-card">Calculator</div>
-
-</section>
-
-<section id="hobbies">
-
-<h2>My Hobbies</h2>
-
-<ul>
-
-<li>Kho Kho</li>
-<li>Cricket</li>
-<li>Kabaddi</li>
-
-</ul>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: rutujashete@gmail.com</p>
-
-<p>Phone: 98XXX XXX10</p>
-
-<a class="contact-btn" href="mailto:rutujashete10@gmail.com">Send Email</a>
-
-</section>
-
-<footer>
-
-<p>© 2026 Rutuja Shete| Portfolio Website</p>
-
-</footer>
+      document.querySelectorAll(".product").forEach(product => {
+        product.style.display =
+          product.innerText.toLowerCase().includes(query)
+            ? "" : "none";
+      });
+    }
+  </script>
 
 </body>
 </html>

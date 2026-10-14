@@ -1,0 +1,65 @@
+/* Smooth page animation */ html { scroll-behavior: smooth; }
+
+body { animation: pageLoad 0.8s ease-in-out; }
+
+@keyframes pageLoad { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Header animation */ header { animation: slideDown 0.7s ease-out; }
+
+@keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+/* Logo hover effect */ .logo { cursor: pointer; transition: transform 0.3s ease, color 0.3s ease; }
+
+.logo:hover { transform: scale(1.12); color: #d633b0; }
+
+/* Search box animation */ .search { transition: all 0.3s ease; }
+
+.search:focus { outline: none; border-color: #9f2089; box-shadow: 0 0 10px #9f208955; transform: scale(1.02); }
+
+/* Navigation hover animation */ nav a { position: relative; transition: color 0.3s ease; }
+
+nav a::after { content: ""; position: absolute; left: 0; bottom: -5px; width: 0; height: 2px; background: #9f2089; transition: width 0.3s ease; }
+
+nav a:hover { color: #9f2089; }
+
+nav a:hover::after { width: 100%; }
+
+/* Sale banner animation */ .banner { animation: bannerAppear 1s ease-out; transition: box-shadow 0.3s ease; }
+
+.banner:hover { box-shadow: 0 10px 25px #9f208933; }
+
+.banner h1 { animation: titlePop 1s ease-in-out; }
+
+@keyframes bannerAppear { from { opacity: 0; transform: scale(0.92); } to { opacity: 1; transform: scale(1); } }
+
+@keyframes titlePop { 0% { transform: scale(0.8); } 60% { transform: scale(1.08); } 100% { transform: scale(1); } }
+
+/* Product card hover effect */ .product { transition: transform 0.35s ease, box-shadow 0.35s ease; animation: productAppear 0.8s ease both; }
+
+.product:nth-child(1) { animation-delay: 0.1s; }
+
+.product:nth-child(2) { animation-delay: 0.2s; }
+
+.product:nth-child(3) { animation-delay: 0.3s; }
+
+.product:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes productAppear { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+.product:hover { transform: translateY(-10px); box-shadow: 0 12px 25px #00000020; }
+
+/* Product image zoom */ .product img { transition: transform 0.5s ease; }
+
+.product:hover img { transform: scale(1.08); }
+
+/* Button animation */ .banner button, .product button { transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; }
+
+.banner button:hover, .product button:hover { background: #761568; transform: scale(1.06); box-shadow: 0 5px 12px #9f208944; }
+
+.banner button:active, .product button:active { transform: scale(0.95); }
+
+/* Footer hover effect */ footer { transition: background 0.3s ease; }
+
+footer:hover { background: #222; }
+
+/* Respect reduced-motion preferences / @media (prefers-reduced-motion: reduce) { , ::before, ::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; } }
